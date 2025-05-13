@@ -1,0 +1,33 @@
+quoteflow/
+├── app/
+│   ├── (dashboard)/        # Protected routes with dashboard layout
+│   │   ├── layout.js       # Dashboard layout with nav and auth check
+│   │   ├── dashboard/
+│   │   │   └── page.js     # Dashboard home page with stats
+│   │   ├── products/
+│   │   │   ├── page.js     # Products list page 
+│   │   │   ├── create/
+│   │   │   │   └── page.js # Create product form
+│   │   │   └── [id]/
+│   │   │       └── page.js # Edit product form
+│   │   └── requests/
+│   │       ├── page.js     # Requests list page
+│   │       └── [id]/
+│   │           └── page.js # Request detail page
+│   ├── api/
+│   │   └── [...path]/
+│   │       └── route.js    # API route handler that proxies to backend
+│   ├── auth/
+│   │   └── page.js         # Authentication page (login/signup)
+│   ├── preview/
+│   │   └── [userId]/
+│   │       └── page.js     # Public product preview page
+│   ├── globals.css         # Global styles
+│   ├── layout.js           # Root layout
+│   └── page.js             # Landing page
+├── middleware.js           # Auth middleware for route protection
+├── utils/
+│   └── auth.js             # Authentication utilities
+├── public/                 # Public assets
+├── package.json
+└── next.config.js
